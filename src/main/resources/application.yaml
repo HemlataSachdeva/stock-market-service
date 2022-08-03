@@ -1,0 +1,31 @@
+
+server:
+  port: 5051
+service:
+  minutes: 15
+  stockconfigs:
+    TEA:
+      - type: COMMON
+        lastdividend: 0
+        fixeddividend: 0
+        parvalue: 100
+    POP:
+      - type: COMMON
+        lastdividend: 8
+        fixeddividend: 0
+        parvalue: 100
+    ALE:
+      - type: COMMON
+        lastdividend: 23
+        fixeddividend: 0
+        parvalue: 60
+    GIN:
+      - type: PREFERED
+        lastdividend: 8
+        fixeddividend: 2
+        parvalue: 100
+    JOE:
+      - type: common
+        lastdividend: 13
+        fixeddividend: 0
+        parvalue: 250
