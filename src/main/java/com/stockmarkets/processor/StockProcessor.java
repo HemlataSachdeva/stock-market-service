@@ -109,11 +109,12 @@ public class StockProcessor implements StockProcessorFactory {
 
         priceProduct = Optional
                 .ofNullable(tradeDTOS)
+                .filter(List::isEmpty)
                 .map(tradeDTOS1 -> tradeDTOS1
                         .stream()
                         .map(TradeDTO::getTradedPrice)
                         .reduce(1d, (a, b) -> a * b))
-                .orElse(null);
+                .orElseThrow(()  -> new CustomeException("error"));
         Double n = (double) tradeDTOS.size();
 
         gbce = Math.pow(priceProduct, 1d / n);

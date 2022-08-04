@@ -3,7 +3,7 @@ package com.stockmarkets.configuration;
 public enum StockType {
 
     COMMON("common"),
-    PREFERED("PREFERED");
+    PREFERED("prefered");
 
     private final String value;
 

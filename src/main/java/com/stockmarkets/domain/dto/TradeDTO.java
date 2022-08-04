@@ -11,8 +11,6 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @Builder(toBuilder = true)
-@NoArgsConstructor
-@AllArgsConstructor
 public class TradeDTO {
 
     @NotNull(message = "Symbol can not be null")

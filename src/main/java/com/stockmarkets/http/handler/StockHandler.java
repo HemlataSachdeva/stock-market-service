@@ -79,9 +79,9 @@ public class StockHandler {
     }
 
     @PostMapping("/trade")
-    public String addTrade(@Valid @RequestBody TradeDTO tradeRequest) {
+    public @ResponseBody ResponseEntity<String> addTrade(@Valid @RequestBody TradeDTO tradeRequest) {
         tradeProcessor.addTrade(tradeRequest);
-        return "success";
+        return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body("success");
     }
 
     @RequestMapping(value = "/{symbol}/volWeightPrice", method = RequestMethod.GET)
